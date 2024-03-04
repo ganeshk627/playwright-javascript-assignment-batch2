@@ -17,7 +17,6 @@ const testDataList = readTestDataFromExcel(excelPath, sheetName);
 // });
 
 
-
 test.describe.serial('Checkout Products', () => {
 
     for (var index in testDataList) {
@@ -25,12 +24,14 @@ test.describe.serial('Checkout Products', () => {
 
         test(`Checkout Products ${index}`, async ({ page }) => {
 
+            // Page class
             const homePage = new HomePage(page);
             const loginPage = new LoginPage(page);
             const productNavigationPage = new ProductNavigationPage(page);
             const productListPage = new ProductListPage(page);
             const checkoutPage = new CheckoutPage(page);
 
+            // Test Data
             const username = testDataList[index].username;
             const password = testDataList[index].password;
             const category = testDataList[index].category;

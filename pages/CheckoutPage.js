@@ -5,8 +5,8 @@ exports.CheckoutPage = class CheckoutPage {
         this.page = page;
 
         this.checkout_button = '[title="Proceed to Checkout"]'
-        this.order_number ='div.checkout-success strong'
-       
+        this.order_number = 'div.checkout-success strong'
+
     }
 
 
@@ -31,5 +31,5 @@ exports.CheckoutPage = class CheckoutPage {
         console.log(`Order Number: ${ordernumber}`)
     }
 
-    
+
 };

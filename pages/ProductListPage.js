@@ -7,9 +7,9 @@ exports.ProductListPage = class ProductListPage {
         this.inventory_item = 'div.product-item-info';
         this.inventory_item_name = 'strong.product-item-name a';
         this.size = '[aria-label="Size"] div';
-        this.color ='[aria-label="Color"] div'
+        this.color = '[aria-label="Color"] div'
         this.add_to_cart_button = 'button[title="Add to Cart"]';
-        this.basket_icon ='div.minicart-wrapper';
+        this.basket_icon = 'div.minicart-wrapper';
     }
 
     async addProductToCart(productName, size, color) {
@@ -55,8 +55,7 @@ exports.ProductListPage = class ProductListPage {
         }
     }
 
-    async openBasket(){
-        // await this.page.locator(this.basket_icon).dispatchEvent('click');
+    async openBasket() {
         await this.page.locator(this.basket_icon).click();
     }
 };
