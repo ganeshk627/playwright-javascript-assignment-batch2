@@ -1,0 +1,22 @@
+{
+  username: 'wy.harrypotter@gmail.com\n',
+  password: 'Harry@hogwarts',
+  category: 'Men',
+  subcategory1: 'Tops',
+  subcategory2: 'Jackets',
+  product1: 'Proteus Fitness Jackshirt',
+  product2: 'Montana Wind Jacket',
+  company: 'HTC Global',
+  phonenumber: 9876543210
+}
+{
+  username: 'wy.harrypotter@gmail.com',
+  password: 'Harry@hogwarts',
+  category: 'Women',
+  subcategory1: 'Tops',
+  subcategory2: 'Jackets',
+  product1: 'Juno Jacket',
+  product2: 'Augusta Pullover Jacket',
+  company: 'HTC Global',
+  phonenumber: 987654321
+}
