@@ -43,14 +43,12 @@ test.describe.serial('Checkout Products', () => {
             const address = testDataList[index].address;
             const phonenumber = testDataList[index].phonenumber;
 
-
             await test.step('a. Launch the application and add a page test to validate against landing on the “Home Page” by verifying page tile and URL of the page', async () => {
                 // Launch the URL
                 await homePage.openApplication();
                 // Validate landing on the Home Page by verifying page title and URL
                 await expect(page, `Page should have title: 'Home Page'`).toHaveTitle('Home Page');
                 await expect(page, `Page should have URL: 'https://magento.softwaretestingboard.com/'`).toHaveURL('https://magento.softwaretestingboard.com/');
-
             });
 
             await test.step('b. Click sign in link and login to the application by providing username and password given in test data file and log the screen shot after filling the details.', async () => {
@@ -65,7 +63,6 @@ test.describe.serial('Checkout Products', () => {
             await test.step('c. Navigate to Product Page based on Category mentioned in the test data file.', async () => {
                 // Navigate to Product Page based on Category from test data file
                 await productNavigationPage.selectProductCategory(category, subcategory1, subcategory2)
-
             });
 
             await test.step('d. Log all products names in the products page by handling pagination.', async () => {
@@ -83,8 +80,7 @@ test.describe.serial('Checkout Products', () => {
             await test.step('f. Repeat the step ‘d’ based on number of products to be added into the cart as per test data file.', async () => {
                 // Repeat step d based on the number of products to be added into the cart
                 await productListPage.addProductToCart(product2, 'S');
-                await page.waitForTimeout(2000)
-
+                await page.waitForTimeout(2000);
             });
 
             await test.step('g. Click on the cart menu and select view and edit cart option', async () => {
@@ -110,13 +106,11 @@ test.describe.serial('Checkout Products', () => {
                 await checkoutPage.selectFixedShippingMethod();
                 // Click next
                 await checkoutPage.clickNext();
-
             });
 
             await test.step('l. Review the information and log the same and click Place Order button', async () => {
                 // Click Place Order button
                 await checkoutPage.placeOrder();
-
             });
 
             await test.step('m. Log the order number', async () => {
@@ -128,7 +122,6 @@ test.describe.serial('Checkout Products', () => {
                 // Logout from the application
                 await homePage.logout();
             });
-
 
         });
     }
