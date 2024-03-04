@@ -102,7 +102,7 @@ test.describe.serial('Checkout Products', () => {
             });
 
             await test.step('j. Click on New Address button and fill the shipping address details from test data file and add validations to check all the necessary details are filled and click ship here button', async () => {
-                //selecting old one
+                // selecting existing old address
             });
 
             await test.step('k. Select the shipping methods and click next', async () => {
